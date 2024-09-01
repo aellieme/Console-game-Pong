@@ -1,5 +1,6 @@
 #include <ncurses.h>
 #include <stdio.h>
+
 int run_racket1(int symbol, int racket1);
 int run_racket2(int symbol, int racket2);
 int directionY(int height, int bally, int speedY);
@@ -104,7 +105,7 @@ int directionX(int width, int ballx, int bally, int speedX, int racket1, int rac
 
 void create(int height, int width, int racket1, int racket2, int ballsx, int ballsy, int count1, int count2) {
     clear();
-    printw("\t\t\tFirst player: %d | Second player: %d\n", count1, count2);
+    printw("\t\t\t\tFirst player: %d | Second player: %d\n", count1, count2);
     for (int y = 0; y < height; y++) {
         for (int x = 0; x < width; x++) {
             if (y == 0 || y == height - 1 || x == 0 || x == width - 1) {
